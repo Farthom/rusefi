@@ -18,6 +18,7 @@
 #include "can_bmw.h"
 #include "can_vag.h"
 #include "can_dash_honda.h"
+#include "can_dash_gt86.h"
 
 #include "rusefi_types.h"
 #include "rtc_helper.h"
@@ -657,6 +658,9 @@ void updateDash(CanCycle cycle) {
 	case CAN_BUS_MS_SIMPLE_BROADCAST:
 		canDashboardTS(cycle);
 		break;
+  case CAN_BUS_GT86_G1:
+    canDashboardGT86Gen1(cycle);
+    break;
 	default:
 		criticalError("Nothing for canNbcType %s", getCan_nbc_e(engineConfiguration->canNbcType));
 		break;

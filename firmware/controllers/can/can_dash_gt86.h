@@ -3,4 +3,4 @@
 #include "pch.h"
 #include "can.h"
 
-void canDashboardGt86(CanCycle cycle);
+void canDashboardGT86Gen1(CanCycle cycle);

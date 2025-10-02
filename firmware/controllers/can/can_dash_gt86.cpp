@@ -32,7 +32,7 @@ void canDashboardGT86Gen1(CanCycle cycle) {
       msg.setShortValue(Sensor::getOrZero(SensorType::Rpm), 2);
       msg[4] = 0; // Duplicate of 0
       msg[5] = 0; // Duplicate of 0
-      msg[6] = 0x09 // Fake ETB pos 3.5% ish
+      msg[6] = 0x09; // Fake ETB pos 3.5% ish
       msg[7] = 0x21; // Unknown flags
 
       g1EcmCounter++;
